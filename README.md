@@ -4,7 +4,7 @@ This is a resume template I created with my twist that is:
 
 - Single-page
 - One column
-- Has modular components
+- Made up of modular components
 
 This contains the following sections:
 
