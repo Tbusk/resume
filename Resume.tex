@@ -11,6 +11,7 @@
 
 % -------------------------------------------------------------------------------------------------------------------- %
 % Imports commands from source files
+\input{src/Header}
 \input{src/ExperienceHeading}
 \input{src/ProjectHeading}
 \input{src/CircleList}
@@ -63,37 +64,41 @@
 \begin{document}
 
     % ---------------------------------------------------------------------------------------------------------------- %
-    \begin{tabular*}{
-        \textwidth % whole doc width
-    }{
-        l@{\extracolsep{\fill}}r % separates cols between & and rows between \\ for full width
+    \rHeader{ % phone number
+        Trevor Busk
+    }{ % email
+        trevor@tbusk.com
+    }{ % shorted displayable website
+        tbusk.com
+    }{ % phone number for link using tel:
+        +12695125088
+    }{ % displayable phone number
+        +1-269-512-5088
     }
-        \textbf{\Large Trevor Busk} & email: \href{mailto:trevor@tbusk.com}{trevor@tbusk.com}\\
-        \href{https://tbusk.com}{tbusk.com} & phone: \href{tel:+12695125088}{+1-269-512-5088}
-    \end{tabular*}
 
     % ---------------------------------------------------------------------------------------------------------------- %
     \section{Education}
 
-    \rExperienceHeading{
+    \rExperienceHeading{ % university name
         Ferris State University
-    }{
+    }{ % university location
         Big Rapids, MI
-    }{
+    }{ % university description, gpa
         Bachelor of Science in Digital Media Software Engineering, GPA: 4.00
-    }{
+    }{ % university duration
         May 2022 - May 2026
     }
 
     % ---------------------------------------------------------------------------------------------------------------- %
     \section{Experience}
-    \rExperienceHeading{
+
+    \rExperienceHeading{ % company name
         Telic AI
-    }{
+    }{ % location, type
         Remote -- Hastings, MI
-    }{
+    }{ % job title
         Software Engineer
-    }{
+    }{ % start and end date
         Oct 2025 - Present
     }
     \rListBeginCircle
