@@ -12,7 +12,7 @@
 % -------------------------------------------------------------------------------------------------------------------- %
 % Imports commands from source files
 \input{src/Header}
-\input{src/ExperienceHeading}
+\input{src/GeneralHeading}
 \input{src/ProjectHeading}
 \input{src/CircleList}
 \input{src/BulletList}
@@ -79,7 +79,7 @@
     % ---------------------------------------------------------------------------------------------------------------- %
     \section{Education}
 
-    \rExperienceHeading{ % university name
+    \rGeneralHeading{ % university name
         Ferris State University
     }{ % university location
         Big Rapids, MI
@@ -92,7 +92,7 @@
     % ---------------------------------------------------------------------------------------------------------------- %
     \section{Experience}
 
-    \rExperienceHeading{ % company name
+    \rGeneralHeading{ % company name
         Telic AI
     }{ % location, type
         Remote -- Hastings, MI
@@ -113,7 +113,7 @@
         }
     \rListEndCircle
 
-    \rExperienceHeading{
+    \rGeneralHeading{
         AD Solutions
     }{
         Remote -- Hastings, MI
@@ -141,7 +141,7 @@
     \rListEndCircle
 
 
-    \rExperienceHeading{
+    \rGeneralHeading{
         Kendall College of Art and Design
     }{
         Remote -- Allegan, MI
@@ -162,44 +162,45 @@
     % ---------------------------------------------------------------------------------------------------------------- %
     \section{Open Source}
 
-    \rOpenSourceHeading{Vala JetBrains IDE Plugin}{github.com/Tbusk/vala-jetbrains-plugin}
+    \rProjectHeading{Vala JetBrains IDE Plugin}{github.com/Tbusk/vala-jetbrains-plugin}
     \rListBeginCircle
         \rPlainItem{Published plugin for JetBrains IDEs enabling development in the Vala programming language made in Java.}
         \rPlainItem{Implemented a variety of features using lsp including codelens, inline-docs, syntax checks, and more using LSP4IJ.}
         \rPlainItem{Added advanced syntax highlighting, vala-lint integration, new project wizard, formatter, and basic syntax checks.}
     \rListEndCircle
 
-    \rOpenSourceHeading{Vala Docs}{github.com/vala-lang/vala-docs}
+    \rProjectHeading{Vala Docs}{github.com/vala-lang/vala-docs}
     \rListBeginCircle
         \rPlainItem{Ported static site generator from Sphinx to VitePress.}
         \rPlainItem{Ported hundreds of documents from restructuredtext to markdown.}
         \rPlainItem{Added documentation on suffixes, data types, syntax, and resolved various issues.}
     \rListEndCircle
 
-    \rOpenSourceHeading{Monitor}{github.com/elementary/monitor}
+    \rProjectHeading{Monitor}{github.com/elementary/monitor}
     \rListBeginCircle
         \rPlainItem{Updated statusbar and indicator GPU usage to use most-active GPU on multi-GPU systems}
         \rPlainItem{Added swap usage and total info to system info memory graph}
         \rPlainItem{Tested per-process GPU usage and added support for AMD systems through working with the maintainer}
         \rPlainItem{Patched issue with CSV parsing of CPU information}
+        \rPlainItem{Created CI/CD test runner GitHub Action}
     \rListEndCircle
 
-%    \rOpenSourceHeading{Settings-Power}{github.com/elementary/settings-power}
+%    \rProjectHeading{Settings-Power}{github.com/elementary/settings-power}
 %    \rListBeginCircle
 %        \rPlainItem{Patched battery-usage setting switch sizing issue.}
 %    \rListEndCircle
 %
-%    \rOpenSourceHeading{Appcenter Dashboard}{github.com/elementary/appcenter-dashboard}
+%    \rProjectHeading{Appcenter Dashboard}{github.com/elementary/appcenter-dashboard}
 %    \rListBeginCircle
 %        \rPlainItem{Patched issue where content was cut off on mobile layouts}
 %    \rListEndCircle
 %
-%    \rOpenSourceHeading{Screenshot}{github.com/elementary/screenshot}
+%    \rProjectHeading{Screenshot}{github.com/elementary/screenshot}
 %    \rListBeginCircle
 %        \rPlainItem{Patched segfault issue where app crashed when the screenshot height was 1/4x or greater than the width}
 %    \rListEndCircle
 %
-%    \rOpenSourceHeading{Greenmail}{github.com/greenmail-mail-test/greenmail}
+%    \rProjectHeading{Greenmail}{github.com/greenmail-mail-test/greenmail}
 %    \rListBeginCircle
 %        \rPlainItem{Patched issue where duplicate messages were being delivered when cc and bcc share the same address as destination.}
 %    \rListEndCircle
