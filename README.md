@@ -23,7 +23,12 @@ You can build a PDF without keeping the extra output files using the following c
 latexmk -pdf Resume.tex && latexmk -c
 ```
 
-This first will build the pdf and then clean up the extra files.
+This first will build the pdf and then clean up the extra files. 
+
+## Preview
+
+![Resume Preview](media/ResumeScreenshot.png)
+
 
 ## Additional Resources
 
