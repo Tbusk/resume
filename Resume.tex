@@ -1,22 +1,25 @@
 \documentclass[11pt, letterpaper]{article}
 
+% import packages
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
-% docs: https://ctan.org/pkg/fullpage?lang=en
-% uses empty pagestyle
 \usepackage[empty]{fullpage}
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
 \usepackage{tabularx}
 \usepackage{enumitem}
 
-% Metadata
-\title{Software Engineer Resume}
-\author{Trevor Busk}
-\date{
-    \today
-}
+% -------------------------------------------------------------------------------------------------------------------- %
+% Imports commands from source files
+\input{src/ExperienceHeading}
+\input{src/ProjectHeading}
+\input{src/CircleList}
+\input{src/BulletList}
+\input{src/EmptyList}
+\input{src/PlainItem}
+\input{src/BoldedItemAndDescription}
 
+% -------------------------------------------------------------------------------------------------------------------- %
 \pagestyle{fancy}
 \fancyhf{}  % clear header and footer fields
 \fancyfoot{}
@@ -28,8 +31,24 @@
 
 \setlength{\tabcolsep}{0in}
 
+% remove extra left margin
+\addtolength{\oddsidemargin}{-0.5in}
+% remove extra right margin
+\addtolength{\evensidemargin}{-0.5in}
+% extend text further right
+\addtolength{\textwidth}{1in}
+% remove extra top margin
+\addtolength{\topmargin}{-0.5in}
+% increase text height; required in order to make use of lower portion of the page
+\addtolength{\textheight}{1in}
+
+% generate correct unicode codepoints
+\pdfgentounicode=1
+
+% -------------------------------------------------------------------------------------------------------------------- %
+% controls section's look
 \titleformat{\section}{
-    \vspace{-10pt} % controls space above section
+    \vspace{-11pt} % controls space above section
     \scshape % gives text the title case with sizing dif between upper and lower case char
     \large % increases text size
 }{}{
@@ -39,77 +58,6 @@
     \titlerule % adds hr line
     \vspace{-5pt} % removes extra top margin
 ]
-
-% remove extra left margin
-\addtolength{\oddsidemargin}{-0.5in}
-% remove extra right margin
-\addtolength{\evensidemargin}{-0.5in}
-% extend text further right
-\addtolength{\textwidth}{1in}
-% remove extra top margin
-\addtolength{\topmargin}{-0.5in}
-% increase text height
-\addtolength{\textheight}{1in}
-
-% generate correct unicode codepoints
-\pdfgentounicode=1
-
-% -------------------------------------------------------------------------------------------------------------------- %
-\newcommand{\rExperienceHeading}[4]{
-    \begin{tabular*}{
-        \textwidth % whole doc width
-    }{
-        l@{\extracolsep{\fill}}r % separates cols between & and rows between \\ for full width
-    }
-    \textbf{#1} & \small#2 \\
-    \textit{\small #3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-9pt}
-}
-
-% -------------------------------------------------------------------------------------------------------------------- %
-\newcommand{\rOpenSourceHeading}[2]{
-    \begin{tabular*}{
-        \textwidth % whole doc width
-    }{
-        l@{\extracolsep{\fill}}r % separates cols between & and rows between \\ for full width
-    }
-    \textbf{#1} & \small{\textit{\href{https://#2}{#2}}} \\
-    \end{tabular*}\vspace{-12pt}
-}
-
-% -------------------------------------------------------------------------------------------------------------------- %
-\newcommand{\rListBeginCircle}{
-    \begin{itemize}[leftmargin=14pt, label=$\circ$, itemsep=-1ex, topsep=0pt]
-}
-\newcommand{\rListEndCircle}{
-    \end{itemize}
-}
-
-% -------------------------------------------------------------------------------------------------------------------- %
-\newcommand{\rListBeginBullet}{
-    \begin{itemize}[leftmargin=14pt, label=$\bullet$, itemsep=-1ex, topsep=0pt]
-}
-\newcommand{\rListEndBullet}{
-    \end{itemize}
-}
-
-% -------------------------------------------------------------------------------------------------------------------- %
-\newcommand{\rListBeginEmpty}{
-    \begin{itemize}[leftmargin=5pt, label={}, itemsep=-1ex, topsep=0pt]
-}
-\newcommand{\rListEndEmpty}{
-    \end{itemize}
-}
-
-% -------------------------------------------------------------------------------------------------------------------- %
-\newcommand{\rPlainItem}[1]{
-    \item\small{#1}
-}
-
-% -------------------------------------------------------------------------------------------------------------------- %
-\newcommand{\rBoldedItem}[2]{
-    \item\small{\textbf{#1}: #2}
-}
 
 % -------------------------------------------------------------------------------------------------------------------- %
 \begin{document}
@@ -263,11 +211,17 @@
     % ---------------------------------------------------------------------------------------------------------------- %
     \section{Skills}
 
+    % Shortened list containing only keywords to job
     \rListBeginEmpty
-        \rBoldedItem{Languages}{Java, JavaScript, TypeScript, Python, Vala}
-        \rBoldedItem{Databases}{MariaDB, Microsoft SQL Server, PostgreSQL}
-        \rBoldedItem{Frameworks}{Spring Boot, React, Preact, Thymeleaf, Freemarker, PayloadCMS, Quarkus, TailwindCSS, Bootstrap}
-        \rBoldedItem{Tools}{Docker, GitHub, Git, Google Cloud, Linux, Hetzner, Figma, AWS}
+        \rBoldedItemAndDescription{Tech Stack}{Java, JavaScript, TypeScript, Python, Spring Boot, React, Docker, AWS, Google Cloud, SQL Server}
     \rListEndEmpty
+
+    % expanded list containing all keywords from experience and projects
+%    \rListBeginEmpty
+%        \rBoldedItemAndDescription{Languages}{Java, JavaScript, TypeScript, Python, Vala}
+%        \rBoldedItemAndDescription{Databases}{MariaDB, Microsoft SQL Server, PostgreSQL}
+%        \rBoldedItemAndDescription{Frameworks}{Spring Boot, React, Preact, Thymeleaf, Freemarker, PayloadCMS, Quarkus, TailwindCSS, Bootstrap}
+%        \rBoldedItemAndDescription{Tools}{Docker, GitHub, Git, Google Cloud, Linux, Hetzner, Figma, AWS}
+%    \rListEndEmpty
 
 \end{document}
