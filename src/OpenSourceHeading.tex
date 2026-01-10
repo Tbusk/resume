@@ -1,0 +1,9 @@
+\newcommand{\rOpenSourceHeading}[2]{
+    \begin{tabular*}{
+        \textwidth % whole doc width
+    }{
+        l@{\extracolsep{\fill}}r % separates cols between & and rows between \\ for full width
+    }
+    \textbf{#1} & \small{\textit{\href{https://#2}{#2}}} \\
+    \end{tabular*}\vspace{-12pt}
+}
