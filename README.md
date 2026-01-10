@@ -15,10 +15,16 @@ This contains the following sections:
 
 ## Building the PDF
 
-To build the PDF, you will need to install `texlive` and build using `pdfTeX`
+To build the PDF, you will need to install `texlive` and build using `latexmk`
 
-You can build a PDF using the following command:
+You can build a PDF without keeping the extra output files using the following command:
 
 ```shell
-pdflatex -halt-on-error -output-directory=./build -out-ut-format=pdf Resume.tex
+latexmk -pdf Resume.tex && latexmk -c
 ```
+
+This first will build the pdf and then clean up the extra files.
+
+## Additional Resources
+
+- [Latexmk Documentation](https://mgeier.github.io/latexmk.html)
