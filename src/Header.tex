@@ -1,0 +1,10 @@
+\newcommand{\rHeader}[5]{
+    \begin{tabular*}{
+        \textwidth % whole doc width
+    }{
+        l@{\extracolsep{\fill}}r % separates cols between & and rows between \\ for full width
+    }
+    \textbf{\Large #1} & Email: \href{mailto:#2}{#2}\\
+    \href{https://#3}{#3} & Phone: \href{tel:#4}{#5}
+    \end{tabular*}
+}
