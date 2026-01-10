@@ -54,6 +54,7 @@
 % generate correct unicode codepoints
 \pdfgentounicode=1
 
+% -------------------------------------------------------------------------------------------------------------------- %
 \newcommand{\rExperienceHeading}[4]{
     \begin{tabular*}{
         \textwidth % whole doc width
@@ -62,9 +63,10 @@
     }
     \textbf{#1} & \small#2 \\
     \textit{\small #3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-9pt}
 }
 
+% -------------------------------------------------------------------------------------------------------------------- %
 \newcommand{\rOpenSourceHeading}[2]{
     \begin{tabular*}{
         \textwidth % whole doc width
@@ -75,6 +77,7 @@
     \end{tabular*}\vspace{-12pt}
 }
 
+% -------------------------------------------------------------------------------------------------------------------- %
 \newcommand{\rListBeginCircle}{
     \begin{itemize}[leftmargin=14pt, label=$\circ$, itemsep=-1ex, topsep=0pt]
 }
@@ -82,6 +85,7 @@
     \end{itemize}
 }
 
+% -------------------------------------------------------------------------------------------------------------------- %
 \newcommand{\rListBeginBullet}{
     \begin{itemize}[leftmargin=14pt, label=$\bullet$, itemsep=-1ex, topsep=0pt]
 }
@@ -89,6 +93,7 @@
     \end{itemize}
 }
 
+% -------------------------------------------------------------------------------------------------------------------- %
 \newcommand{\rListBeginEmpty}{
     \begin{itemize}[leftmargin=5pt, label={}, itemsep=-1ex, topsep=0pt]
 }
@@ -96,17 +101,20 @@
     \end{itemize}
 }
 
+% -------------------------------------------------------------------------------------------------------------------- %
 \newcommand{\rPlainItem}[1]{
     \item\small{#1}
 }
 
+% -------------------------------------------------------------------------------------------------------------------- %
 \newcommand{\rBoldedItem}[2]{
     \item\small{\textbf{#1}: #2}
 }
 
-
+% -------------------------------------------------------------------------------------------------------------------- %
 \begin{document}
 
+    % ---------------------------------------------------------------------------------------------------------------- %
     \begin{tabular*}{
         \textwidth % whole doc width
     }{
@@ -116,8 +124,9 @@
         \href{https://tbusk.com}{tbusk.com} & phone: \href{tel:+12695125088}{+1-269-512-5088}
     \end{tabular*}
 
-
+    % ---------------------------------------------------------------------------------------------------------------- %
     \section{Education}
+
     \rExperienceHeading{
         Ferris State University
     }{
@@ -128,7 +137,7 @@
         May 2022 - May 2026
     }
 
-
+    % ---------------------------------------------------------------------------------------------------------------- %
     \section{Experience}
     \rExperienceHeading{
         Telic AI
@@ -140,15 +149,15 @@
         Oct 2025 - Present
     }
     \rListBeginCircle
-    \rPlainItem{
-        Researched and experimented with dozens of ML models to identify the most effective models at image generation and image mixing for an undisclosed use-case.
-    }
-    \rPlainItem{
-        Experimented with creating multi-language documents from a node-js environment using images and text using libraries like pdfkit and puppeteer.
-    }
-    \rPlainItem{
-        Created an ecommerce web platform using PayloadCMS, PostgresSQL, Docker, and Next.js to create products, manage content for the website, and procure personalized products via ML model integration and automation.
-    }
+        \rPlainItem{
+            Researched and experimented with dozens of ML models to identify the most effective models at image generation and image mixing for an undisclosed use-case.
+        }
+        \rPlainItem{
+            Experimented with creating multi-language documents from a node-js environment using images and text using libraries like pdfkit and puppeteer.
+        }
+        \rPlainItem{
+            Created an ecommerce web platform using PayloadCMS, PostgresSQL, Docker, and Next.js to create products, manage content for the website, and procure personalized products via ML model integration and automation.
+        }
     \rListEndCircle
 
     \rExperienceHeading{
@@ -160,7 +169,6 @@
     }{
         June 2024 - Present
     }
-
     \rListBeginCircle
     \rPlainItem{
         Owned the end-to-end project lifecycle after securing a solo contract, automating the entire software delivery process by architecting a multi-stage CI/CD pipeline with GitHub Actions for testing, Docker builds, and secure, one-click deployments.
@@ -189,7 +197,6 @@
     }{
         Sept 2023 - May 2024
     }
-
     \rListBeginCircle
     \rPlainItem{
         Engineered the core backend for an industry-first billing portal by designing a Spring Boot application with MariaDB database and integrating with a massive, undocumented ERP system by creating at least a dozen RESTful APIs.
@@ -199,7 +206,9 @@
     }
     \rListEndCircle
 
+    % ---------------------------------------------------------------------------------------------------------------- %
     \section{Open Source}
+
     \rOpenSourceHeading{Vala JetBrains IDE Plugin}{github.com/Tbusk/vala-jetbrains-plugin}
     \rListBeginCircle
         \rPlainItem{Published plugin for JetBrains IDEs enabling development in the Vala programming language made in Java.}
@@ -241,7 +250,7 @@
 %    \rListBeginCircle
 %        \rPlainItem{Patched issue where duplicate messages were being delivered when cc and bcc share the same address as destination.}
 %    \rListEndCircle
-%
+    % ---------------------------------------------------------------------------------------------------------------- %
 %    \section{Projects}
 %    \rListBeginBullet
 %        \rBoldedItem{Vala JetBrains IDE Plugin}{Authored and published an open-source language plugin for the Vala language.}
@@ -251,7 +260,9 @@
 %        \rBoldedItem{LaTeX Resume Template}{Created a LaTeX resume template which this resume uses.}
 %    \rListEndCircle
 
+    % ---------------------------------------------------------------------------------------------------------------- %
     \section{Skills}
+
     \rListBeginEmpty
         \rBoldedItem{Languages}{Java, JavaScript, TypeScript, Python, Vala}
         \rBoldedItem{Databases}{MariaDB, Microsoft SQL Server, PostgreSQL}
