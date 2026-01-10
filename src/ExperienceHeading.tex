@@ -1,0 +1,10 @@
+\newcommand{\rExperienceHeading}[4]{
+    \begin{tabular*}{
+        \textwidth % whole doc width
+    }{
+        l@{\extracolsep{\fill}}r % separates cols between & and rows between \\ for full width
+    }
+    \textbf{#1} & \small#2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
