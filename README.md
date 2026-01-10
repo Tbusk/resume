@@ -4,14 +4,17 @@ This is a resume template I created with my twist that is:
 
 - Single-page
 - One column
+- Has modular components
 
 This contains the following sections:
 
-- Contact Info
+- Header
 - Education
 - Experience
 - Open Source
-- Projects
+- Projects (commented out)
+- Skills
+- Condensed Skills (commented out)
 
 ## Building the PDF
 
