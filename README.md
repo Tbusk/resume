@@ -156,6 +156,22 @@ to add vertical or horizontal spacing.
 \vspace{1pt}
 ```
 
+### Bolding
+
+You can make something bold by using
+
+```latex
+\textbf{text}
+```
+
+### Italicization
+
+You can make something italicized by using
+
+```latex
+\textit{text}
+```
+
 ## Additional Resources
 
 - [Latexmk Documentation](https://mgeier.github.io/latexmk.html)
