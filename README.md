@@ -22,7 +22,8 @@ To get started, you can add things to the document starting between the begin an
 
 To build the PDF, you will need to install `texlive` and build using `latexmk`.
 
-You likely will need to install dependencies, but on the Solus Linux Distrobution, you only need `texlive` and `latexmk`.
+You likely will need to install dependencies, but on the Solus Linux Distrobution, you only need `texlive` and
+`latexmk`.
 
 You can build a PDF without keeping the extra output files using the following command:
 
@@ -136,6 +137,23 @@ It has two parameters, the first is the full url, and the second is what the use
 
 ```latex
 \href{full url}{user-facing display}
+```
+
+### Spacing
+
+You can add more spacing or adjust it for something pretty easily. Use either the hspace or vspace depending if you want
+to add vertical or horizontal spacing.
+
+#### Horizontal
+
+```latex
+\hspace{1pt}
+```
+
+#### Vertical
+
+```latex
+\vspace{1pt}
 ```
 
 ## Additional Resources
