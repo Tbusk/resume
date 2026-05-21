@@ -128,6 +128,16 @@ It has two parameters, one is a bolded title with a colon and a space appended t
 \rBoldedItemAndDescription{Name}{Description}
 ```
 
+### Links
+
+You can add a link to something pretty easily
+
+It has two parameters, the first is the full url, and the second is what the user actually sees.
+
+```latex
+\href{full url}{user-facing display}
+```
+
 ## Additional Resources
 
 - [Latexmk Documentation](https://mgeier.github.io/latexmk.html)
