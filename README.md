@@ -33,6 +33,19 @@ latexmk -pdf Resume.tex && latexmk -c
 
 This first half will build the pdf and the rest will clean up the extra files.
 
+### Header
+
+The header is the topmost item in the résumé.
+
+It has five parameters. In the top left, the first parameter is for your name. It is in bold and large. The second
+parameter in the top right is for your email. The third parameter is in the bottom left portion below your name which is
+for your website. And lastly, the fourth and fifth parameter is for your phone number. The fourth one is used for a
+link, and the fifth one is what is shown.
+
+```latex
+\rHeader{Name}{Email Address}{Website without https portion(added automatically)}{Phone Number (to use for link via tel)}{Phone Number (visible)}
+```
+
 ### Sections
 
 To declare a section, all you need to do is add a section with a title of it in a parameter.
