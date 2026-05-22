@@ -1,10 +1,11 @@
-\newcommand{\rHeader}[5]{
-    \begin{tabular*}{
-        \textwidth % whole doc width
-    }{
-        l@{\extracolsep{\fill}}r % separates cols between & and rows between \\ for full width
-    }
-    \textbf{\Large #1} & \textbf{\small Email}: \href{mailto:#2}{#2}\\
-    \href{https://#3}{#3} & \textbf{\small Phone}: \href{tel:#4}{#5}
-    \end{tabular*}
+\newcommand{\rHeader}[8]{
+    \begin{center}
+        \textbf{\Huge #1}\\
+        \href{tel:#2}{\small #3} $|$
+        \href{mailto:#4}{\small \uline{#4}} $|$
+        \href{https://#5}{\small \uline{#5}} $|$
+        \href{https://#6}{\small \uline{#6}} $|$
+        \href{https://#7}{\small \uline{#7}} $|$
+        \href{https://#8}{\small \uline{#8}}
+    \end{center}\vspace{-6pt}
 }

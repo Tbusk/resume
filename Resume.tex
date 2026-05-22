@@ -8,6 +8,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{tabularx}
 \usepackage{enumitem}
+\usepackage{ulem}
 
 % -------------------------------------------------------------------------------------------------------------------- %
 % Imports commands from source files
@@ -64,15 +65,17 @@
 \begin{document}
 
     % ---------------------------------------------------------------------------------------------------------------- %
-    \rHeader{Trevor Busk}{trevor@tbusk.com}{tbusk.com}{+12695125088}{+1-269-512-5088}
+    \rHeader{Trevor Busk}{+12695125088}{269-512-5088}{trevor@tbusk.com}{tbusk.com}{linkedin.com/in/trevor-busk}{github.com/tbusk}{codeberg.com/tbusk}
 
     % ---------------------------------------------------------------------------------------------------------------- %
-    \section{Education}
+    \section{Skills}
 
-    \rGeneralHeading{Ferris State University}{Big Rapids, MI}{Bachelor of Science in Digital Media Software Engineering, GPA: 4.00}{May 2022 -- May 2026}
+    % add additional space between section title and content
+    \vspace{4pt}
 
+    % Shortened list containing only keywords to job
     \rListBeginEmpty
-        \rBoldedItemAndDescription{Achievements}{\href{https://www.ferris.edu/news/archive/2026/2026-college-of-business-excellence-awards.htm}{2026 College of Business Excellence Award Winner}, Dean's List}
+    \rBoldedItemAndDescription{Tech Stack}{Java, TypeScript, SQL, Spring Boot, React, Docker, Python, GitHub, Tailwind CSS, AWS, GCP, Linux}
     \rListEndEmpty
 
     % ---------------------------------------------------------------------------------------------------------------- %
@@ -102,7 +105,6 @@
         \rPlainItem{Built the backend for a company's billing portal using Spring Boot, SQL Server, MariaDB, Stripe, and a massive undocumented ERP system containing thousands of tables, tens of thousands of columns, and more.}
         \rPlainItem{Developed key frontend components such as login, payment, and autopay UIs for the company's billing portal using React, TypeScript, Stripe, and more.}
         \rPlainItem{Managed the project for the team on GitHub, including organizing issues, adding items to the backlog, doing code reviews, updating statuses, assigning issues, and more.}
-        \rPlainItem{Built an automated invoice PDF generator using web technologies, IronPDF, MariaDB, and Thymeleaf.}
     \rListEndCircle
 
     % ---------------------------------------------------------------------------------------------------------------- %
@@ -129,14 +131,12 @@
     \rListEndCircle
 
     % ---------------------------------------------------------------------------------------------------------------- %
-    \section{Skills}
+    \section{Education}
 
-    % add additional space between section title and content
-    \vspace{4pt}
+    \rGeneralHeading{Ferris State University}{Big Rapids, MI}{Bachelor of Science in Digital Media Software Engineering, GPA: 4.00}{May 2022 -- May 2026}
 
-    % Shortened list containing only keywords to job
     \rListBeginEmpty
-        \rBoldedItemAndDescription{Tech Stack}{Java, TypeScript, SQL, Spring Boot, React, Docker, Python, GitHub, Tailwind CSS, AWS, GCP, Linux}
+    \rBoldedItemAndDescription{Achievements}{\href{https://www.ferris.edu/news/archive/2026/2026-college-of-business-excellence-awards.htm}{2026 College of Business Excellence Award Winner}, Dean's List}
     \rListEndEmpty
 
 \end{document}

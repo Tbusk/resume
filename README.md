@@ -20,6 +20,8 @@ To get started, you can add things to the document starting between the begin an
 \end{document}
 ```
 
+### Building
+
 To build the PDF, you will need to install `texlive` and build using `latexmk`.
 
 You likely will need to install dependencies, but on the Solus Linux Distrobution, you only need `texlive` and
@@ -37,10 +39,16 @@ This first half will build the pdf and the rest will clean up the extra files.
 
 The header is the topmost item in the résumé.
 
-It has five parameters. In the top left, the first parameter is for your name. It is in bold and large. The second
-parameter in the top right is for your email. The third parameter is in the bottom left portion below your name which is
-for your website. And lastly, the fourth and fifth parameter is for your phone number. The fourth one is used for a
-link, and the fifth one is what is shown.
+It has eight parameters. The first parameter is centered on the first line. The rest are centered and separated by a
+pipe on the second line.
+
+1. Your name
+2. Your phone number used as a link
+3. Your phone number formatted as you want it to look
+4. Your email address
+
+Five through eight are for your links, such as your website, your github page, your codeberg page, your linkedin page,
+etc.
 
 ```latex
 \rHeader{Name}{Email Address}{Website without https portion(added automatically)}{Phone Number (to use for link via tel)}{Phone Number (visible)}
