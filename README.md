@@ -51,7 +51,7 @@ Five through eight are for your links, such as your website, your github page, y
 etc.
 
 ```latex
-\rHeader{Name}{Email Address}{Website without https portion(added automatically)}{Phone Number (to use for link via tel)}{Phone Number (visible)}
+\rHeader{Name}{Phone Number}{Phone Number (Visible)}{Email Address}{URL}{URL}{URL}{URL}
 ```
 
 ### Sections
