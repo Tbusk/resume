@@ -1,10 +1,14 @@
-\newcommand{\rProjectHeading}[2]{
+\newcommand{\rProjectHeading}[4]{
     \begin{tabular*}{
         \textwidth % whole doc width
         \vspace{4pt}
     }{
         l@{\extracolsep{\fill}}r % separates cols with spacing
     }
-    \hspace{4pt}\textbf{#1} & \small{\textit{\href{https://#2}{#2}}} \\
+    \if\relax#2\relax
+        \hspace{4pt}\textbf{#1,} {#2} & {\small#4}\\
+    \else
+        \hspace{4pt}\textbf{#1,} {#2} \small{(\textit{\href{https://#3}{#3}})} & {\small#4} \\
+    \fi
     \end{tabular*}\vspace{-12pt}
 }
