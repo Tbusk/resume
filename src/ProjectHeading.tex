@@ -6,9 +6,17 @@
         l@{\extracolsep{\fill}}r % separates cols with spacing
     }
     \if\relax#2\relax
-        \hspace{4pt}\textbf{#1,} {#2} & {\small#4}\\
+        \if\relax#3\relax
+            \hspace{4pt}\textbf{#1} & {\small#4}\\
+        \else
+            \hspace{4pt}\textbf{#1} \small{(\textit{\href{https://#3}{#3}})} & {\small#4} \\
+        \fi
     \else
-        \hspace{4pt}\textbf{#1,} {#2} \small{(\textit{\href{https://#3}{#3}})} & {\small#4} \\
+        \if\relax#3\relax
+            \hspace{4pt}\textbf{#1,} {#2} & {\small#4}\\
+        \else
+            \hspace{4pt}\textbf{#1,} {#2} \small{(\textit{\href{https://#3}{#3}})} & {\small#4} \\
+        \fi
     \fi
     \end{tabular*}\vspace{-12pt}
 }
