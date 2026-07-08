@@ -1,11 +1,11 @@
-\newcommand{\rHeader}[7]{
+\newcommand{\rHeader}[0]{
     \begin{center}
-        \textbf{\Huge #1}\\
-        \href{tel:#2}{\small #3} $|$
-        \href{mailto:#4}{\small \uline{#4}} $|$
-        \href{https://#5}{\small \uline{#5}} $|$
-        \href{https://#6}{\small \uline{#6}} $|$
-        \href{https://#7}{\small \uline{#7}} %$|$
-        %\href{https://#8}{\small \uline{#8}}
+        \textbf{\Huge \myName} \\
+        \vspace{2pt}{\myAddress} \\
+        \vspace{2pt}\href{tel:\myPhoneNumberLink}{\small \myPhoneNumberVisible} $|$
+        \href{mailto:\myEmailAddress}{\small \uline{\myEmailAddress}} $|$
+        \href{https://\myGitHubUrl}{\small \uline{\myGitHubUrl}} $|$
+        \href{https://\myLinkedInUrl}{\small \uline{\myLinkedInUrl}} $|$
+        \href{https://\myWebsite}{\small \uline{\myWebsite}}
     \end{center}\vspace{-6pt}
 }
