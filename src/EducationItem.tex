@@ -1,0 +1,11 @@
+\newcommand{\rEducationItem}[5]{
+    \begin{tabular*}{
+        \textwidth % whole doc width
+        \vspace{4pt}
+    }{
+        l@{\extracolsep{\fill}}r % separates cols with spacing
+    }
+    \hspace{4pt}\textbf{#1,} \textbf{#2,} {#3} & \small{#4} \\
+    \vspace{4pt}\hspace{4pt}\textit{\small #5} \\
+    \end{tabular*}\vspace{-6pt}
+}
