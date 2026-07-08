@@ -39,19 +39,44 @@ This first half will build the pdf and the rest will clean up the extra files.
 
 The header is the topmost item in the résumé.
 
-It has eight parameters. The first parameter is centered on the first line. The rest are centered and separated by a
-pipe on the second line.
+It contains:
 
 1. Your name
 2. Your phone number used as a link
 3. Your phone number formatted as you want it to look
 4. Your email address
-
-Five through eight are for your links, such as your website, your github page, your codeberg page, your linkedin page,
-etc.
+5. Your website
+6. Your GitHub page
+7. Your LinkedIn page
 
 ```latex
-\rHeader{Name}{Phone Number}{Phone Number (Visible)}{Email Address}{URL}{URL}{URL}{URL}
+\rHeader
+```
+
+### Variables
+
+The document uses variables to simplify some of the experience
+
+Your contact details and socials for the header and elsewhere:
+
+- `\myName{}`: Your Full Name
+- `\myPhoneNumberLink{}`: Your phone number in a condensed format (e.g., +11234567890)
+- `\myPhoneNumberVisible{}`: Your phone number in a pretty format (e.g., +1 (123) 456-7890)
+- `\myEmailAddress{}`: Your email address
+- `\myWebsite{}`: Your website URL
+- `\myLinkedInUrl{}`: Your LinkedIn profile URL
+- `\myGitHubUrl{}`: Your GitHub profile URL
+
+You can create new variables by adding them in the parameter section like this:
+
+```latex
+\def\name{value}
+```
+
+and calling them like this:
+
+```latex
+\name
 ```
 
 ### Sections
