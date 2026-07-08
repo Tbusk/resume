@@ -21,7 +21,6 @@
 \input{src/PlainItem}
 \input{src/BoldedItemAndDescription}
 \input{src/EducationItem}
-\input{src/ExperienceExtension}
 
 % -------------------------------------------------------------------------------------------------------------------- %
 \pagestyle{fancy}
@@ -108,29 +107,27 @@
     \rGeneralHeading{Software Engineer}{Jun 2024 -- Present}{AD Solutions}{Hastings, MI}
     
     \rListBeginCircle
-        \rPlainItem{Built a payment reconciliation automation between Stripe, an ERP, and the billing portal using Java, webhooks, and MS SQL stored procedures, eliminating up to 3 days per month of manual accounting activity autonomously.}
-        \rPlainItem{Built an HR recruiting pipeline automation syncing assessment reports and routing applicants across 50+ job postings using Java, Quarkus, GCP, and webhooks, eliminating up to a day per month of manual HR activity.}
+        \rPlainItem{Built a payment reconciliation automation between Stripe, an ERP, and the company's billing portal using Java, webhooks, and Microsoft SQL Server stored procedures, eliminating up to 3 days per month of manual accounting.}
+        %\rPlainItem{Built an HR recruiting pipeline automation syncing assessment reports and routing applicants across 50+ job postings using Java, Quarkus, Google Cloud Platform, and webhooks, eliminating up to a day per month of manual activity.}
+        \rPlainItem{Built 25+ JWT-secured RESTful APIs atop Microsoft SQL Server and MariaDB using Java, Spring Boot, and Spring Security, with TypeScript and React frontends for role-locked wallet pages, invoicing, and an internal CMS.}
         %\rPlainItem{Engineered a batch onboarding system capable of onboarding any number of customers on any schedule using MariaDB, Google Sheets, and Java, cutting onboarding time from days to minutes and onboarding over 600 businesses.}
         %\rPlainItem{Built a daily updated Google Sheets onboarding status tracker from billing portal data for the customer support team, eliminating the need for the development team manually creating reports for inquiries.}
         %\rPlainItem{Built a weekly sales reporting automation for five teams using Java, Spring Boot, and cron, saving 1–3 hours per week for the manager by replacing manual data compilation with an automated, error-free weekly report.}
         %\rPlainItem{Built an automated printer meter entry pipeline, eliminating the need for Zapier and an external vendor, by parsing email meter readings and inserting validated entries directly into the ERP via stored procedures for 12+ printers.}
-        %\rPlainItem{Established a CI/CD pipeline with GitHub Actions, GCP, and Docker that reduced deployment times from an hour of manual activity to a single approval, for upwards of a dozen releases per month.}
-        \rPlainItem{Added 1,000+ tests using Java, JUnit 5, and Mockito, increasing test coverage of the backend by 70\%, preventing regression and enabling more confident deployments.}
-        %\rPlainItem{Created multiple isolated environments (dev, dockerized dev, testing, CI/CD, production), enabling consistent setup in minutes and eliminating platform-specific bugs across Linux, Mac OS, and Linux.}
-        %\rPlainItem{Set up an automated MariaDB database backup process with Bash, GCP, and cron, ensuring data integrity, quick recovery, and multiple redundancy fail safes.}
+        \rPlainItem{Established a CI/CD pipeline with GitHub Actions, Google Cloud Platform, and Docker that reduced developer-involved deployment times from an hour to seconds, saving upward of a day per month of developer time.}
+        \rPlainItem{Added 1,000+ unit, integration, and API tests using JUnit 5, Mockito, MockMvc, RestTemplate, and GreenMail, achieving 70\% method and 88\% class coverage, preventing regressions.}
+        %\rPlainItem{Created multiple isolated environments (dev, dockerized dev, testing, CI/CD, production), enabling consistent setup in minutes and eliminating platform-specific bugs across Linux, Mac OS, and Windows.}
+        %\rPlainItem{Set up an automated MariaDB database backup process with Bash, Google Cloud Platform, and cron, ensuring data integrity, quick recovery, and multiple redundancy fail safes.}
         %\rPlainItem{Redesigned the billing portal's MariaDB database from one table to over twelve normalized tables, improving data integrity, query performance, and extensibility while enabling features like RBAC and batch onboarding.}
-        %\rPlainItem{Deployed the company's full-stack billing portal (React \& Spring Boot) into production using a hybrid GCP and on-premises strategy, launching the business's first self-service billing experience for 650+ businesses.}
+        %\rPlainItem{Deployed the company's full-stack billing portal (React \& Spring Boot) into production using a hybrid Google Cloud Platform and on-premises strategy, launching the business's first self-service billing experience for 650+ businesses.}
         %\rPlainItem{Redesigned the invoices to include a pay-by-mail tear-off page, redesigned the main page, and extended ERP content, generating 2,700+ invoices for 650+ businesses using Java, Spring Boot, and Thymeleaf.}
-        \rPlainItem{Built customer-facing wallet pages for payment method management, autopay management, invoice history, and billing insights using Java, Spring Boot, Stripe, TypeScript, and React, serving 650+ businesses.}
         %\rPlainItem{Integrated Intercom into the billing portal, giving customers in-app access to help articles, FAQs, and staff chat without leaving the platform, improving the support experience from the email/phone-only model.}
-        %\rPlainItem{Designed and implemented a custom RBAC system with 10+ roles and 50+ permissions, enabling the company to scale from a limited number of roles to a flexible, permission-based access model updatable in the CMS.}
         %\rPlainItem{Built a sales data syncing automation for a lead-tracking platform using Spring Boot, Java, and AOP, saving the sales team hours of repetitive data entry per month with expansions planned.}
-        %\rPlainItem{Built a CLI-based database query utility using Spring Shell, Java, GCP, and SQL Server, allowing developers without direct database access to run select queries and export reports.}
+        %\rPlainItem{Built a CLI-based database query utility using Spring Shell, Java, Google Cloud Platform, and SQL Server, allowing developers without direct database access to run select queries and export reports.}
         %\rPlainItem{Built an email application to send targeted customer communications using production data and customizable templates via Spring Boot and Java, cutting mass-emailing time from hours to minutes per campaign.}
-        %\rPlainItem{Built a reusable email footer template using Freemarker, Bootstrap, and Thymeleaf, ensuring all billing platform emails share a consistent, recognizable footer to customers.}
+        %\rPlainItem{Built a reusable email footer template using FreeMarker, Bootstrap, and Thymeleaf, ensuring all billing platform emails share a consistent, recognizable footer to customers.}
         %\rPlainItem{Converted separate frontend and backend repos into a unified monorepo for the billing platform, simplifying CI/CD, reducing PR overhead, and enabling future expansion added as modules.}
         %\rPlainItem{Added frontend source code obfuscation and minification to the billing portal, improving load performance and protecting proprietary code from competitors.}
-        \rPlainItem{Designed and implemented an internal CMS extension to the billing portal using Java, TypeScript, React, and Spring Boot, enabling staff across departments to manage the portal without the development team's involvement.}
         %\rPlainItem{Configured nginx as a production reverse proxy with TLS, Let's Encrypt, and request mirroring for the billing portal, securing and upgrading all customer-facing traffic.}
         %\rPlainItem{Automated certificate renewal via Bash, cron, and Let's Encrypt, eliminating manual certificate rotation and ensuring uninterrupted HTTPS for the billing portal.}
         %\rPlainItem{Implemented Caffeine in-memory caching for ERP data in the billing portal, reducing SQL Server load across 650 customers by serving most data from the cache while keeping fresh via billing-cycle and payment-event invalidation.}
@@ -139,32 +136,32 @@
     \rGeneralHeading{Research Assistant}{Jan 2026 -- May 2026}{Ferris State University}{Hastings, MI}
 
     \rListBeginCircle
-        \rPlainItem{Built Ferrell, a custom LLM-powered VS Code extension with a TypeScript and React frontend and a Java and Spring Boot backend on AWS, providing sudents with code reviews, study tools, and socratic mentorship.}
+        \rPlainItem{Built Ferrell, a custom LLM-powered VS Code extension with a TypeScript and React frontend and a Java and Spring Boot backend on Amazon Web Services, providing students with code reviews, study tools, and Socratic mentorship.}
+        \rPlainItem{Led the Agile workflow on GitHub for a Scrum team, creating user stories, organizing issues, assigning priorities, maintaining the backlog, and coordinating feature delivery across members and stakeholders.}
         %\rPlainItem{Added global state persistence and cross-IDE support (VS Code, Cursor, Antigravity, VSCodium) to Ferrell, allowing chat sessions to survive window switching and closing.}
-        %\rPlainItem{Implemented CI/CD pipelines for testing, documentation, Docker image builds, code quality, and VSIX extension packaging using GitHub Actions, Docker, and AWS.}
-        %\rPlainItem{Integrated Javadocs, TSDocs, and Swagger/OpenAPI documentation into the Ferrell backend and frontend, fully documenting the project and enabling future expansion.}
+        %\rPlainItem{Implemented CI/CD pipelines for testing, documentation, Docker image builds, code quality, and VSIX extension packaging using GitHub Actions, Docker, and Amazon Web Services.}
+        %\rPlainItem{Integrated Javadoc, TSDoc, and Swagger/OpenAPI documentation into the Ferrell backend and frontend, fully documenting the project and enabling future expansion.}
         %\rPlainItem{Researched and evaluated top educational and industry AI tools (ChatGPT Study Mode, Harvard's SocratiQ, JetBrains AI, Cursor, Antigravity) to identify features and inform the development of a custom Socratic LLM tool.}
         %\rPlainItem{Presented as a featured speaker at Ferris AI Day, demonstrating a custom LLM-powered VS Code extension's architecture and features to a diverse audience of students, faculty, and administrators.}
-        %\rPlainItem{Engineered a custom Markdown prompt architecture that embeds code file content into the LLM user prompt, bypassing AWS Bedrock's file type and count limits to support 60 code files and 4 image/pdfs across 400+ file types.}
+        %\rPlainItem{Engineered a custom Markdown prompt architecture that embeds code file content into the LLM user prompt, bypassing Amazon Bedrock's file type and count limits to support 60 code files across 400+ types and 4 image/pdfs.}
     \rListEndCircle
 
     \rGeneralHeading{Software Engineer}{Oct 2025 -- Apr 2026}{Telic Corporation}{Hastings, MI}
 
     \rListBeginCircle
-        \rPlainItem{Built the foundations of a full-stack international eCommerce platform for personalized children's books using TypeScript, React, Next.js, PayloadCMS, PostgreSQL, and Docker, with i18n support for English and Arabic.}
-        %\rPlainItem{Researched and tested dozens of image generation and feature-personalization ML models across platforms like GitHub, Huggingface, Replicate, OpenRouter, and Google, proving feasibility of personalization for illustrated books.}
+        \rPlainItem{Built the foundations of a full-stack international eCommerce platform for personalized children's books using TypeScript, React, PayloadCMS, PostgreSQL, and Docker for the R\&D department of a software consultancy firm.}
+        %\rPlainItem{Researched and tested dozens of image generation and feature-personalization ML models across platforms like GitHub, Hugging Face, Replicate, OpenRouter, and Google, proving feasibility of personalization for illustrated books.}
         %\rPlainItem{Designed PayloadCMS collections and page models for personalized children's books, storing per-page images, text, prompts, and page code with previewing, enabling non-technical management of the entire book catalog.}
     \rListEndCircle
 
     \rGeneralHeading{Software Engineer Intern}{Sep 2023 -- Apr 2024}{Kendall College of Art and Design}{Grand Rapids, MI}
 
     \rListBeginCircle
-        \rPlainItem{Developed the backend for a live billing portal using Java, Spring Boot, Spring Security, MariaDB, Stripe, and a massive Microsoft SQL Server ERP (thousands of tables/columns/procedures).}
-        %\rPlainItem{Implemented Caffeine in-memory caching for ERP data pulls, reducing MS SQL load by serving most data from cache with billing-cycle and event-driven invalidation.}
-        %\rPlainItem{Created an automated consolidated invoice generator using Bootstrap, IronPdf, and Thymeleaf that replaced the multi-invoice ERP documents with a single, monthly invoice per customer, greatly simplifying and reducing confusion.}
-        \rPlainItem{Created RESTful APIs for 10+ ERP domains (contracts, equipment, invoices, meter readings, service calls, taxes) and Stripe, abstracting a massive MS SQL ERP using endpoints made with Java and Spring Boot for the frontend team.}
+        \rPlainItem{Built 30+ RESTful APIs with JWT auth for a live billing portal using Java, Spring Boot, Spring Security, MariaDB, Stripe, and a massive Microsoft SQL Server ERP for the frontend team.}
+        %\rPlainItem{Implemented Caffeine in-memory caching for ERP data pulls, reducing Microsoft SQL Server load by serving most data from cache with billing-cycle and event-driven invalidation.}
+        %\rPlainItem{Created an automated consolidated invoice generator using Bootstrap, IronPDF, and Thymeleaf that replaced the multi-invoice ERP documents with a single, monthly invoice per customer, greatly simplifying and reducing confusion.}
         %\rPlainItem{Managed the team's complete Agile workflow on GitHub, creating user stories, organizing issues, maintaining the backlog, conducting code reviews, and coordinating with team members and stakeholders on a 10+ person team.}
-        %\rPlainItem{Built key customer-facing frontend components such as the login, payment processing, supplies, equipment, and servicing billables, and autopay UI using React and TypeScript that 650+ businesses rely on.}
+        \rPlainItem{Built key customer-facing frontend components such as the login, payment processing, supplies, equipment, service billables, and autopay UI using React and TypeScript that 650+ businesses rely on.}
         %\rPlainItem{Set up a custom variable-payment autopay solution on top of Stripe, charging customers their balance up to a configurable limit, reducing manual payment actions and giving customers control over their autopay thresholds.}
         %\rPlainItem{Created an admin utility for account creation and API documentation browsing using Thymeleaf templates with standard auth, enabling staff to create accounts and explore APIs without developer involvement.}
     \rListEndCircle
@@ -178,8 +175,8 @@
 %
 %    \rListBeginEmpty
 %        %\rBoldedItemAndDescription{Portfolio}{Created a multi-theme static website using Preact, TypeScript, Tailwind CSS, and GitHub Pages.}
-%        \rBoldedItemAndDescription{Vala JetBrains IDE Plugin}{Built a plugin using Java supporting development using the Vala programming langauge.}
-%        %\rBoldedItemAndDescription{AWS DeepRacer}{Created a ML model that ranks 2nd in the US, sub top 10 in North America, and top 60 worldwide.}
+%        \rBoldedItemAndDescription{Vala JetBrains IDE Plugin}{Built a plugin using Java supporting development using the Vala programming language.}
+%        %\rBoldedItemAndDescription{AWS DeepRacer}{Created an ML model that ranks 2nd in the US, sub top 10 in North America, and top 60 worldwide.}
 %        %\rBoldedItemAndDescription{Remote Development Environment}{Set up, used IDEs, and developed projects on the cloud with Hetzner VMs.}
 %        \rBoldedItemAndDescription{Item Classification}{With a military contractor, I helped build a computer vision system to reduce disposition waste.}
 %        %\rBoldedItemAndDescription{Resume Template}{Built this software developer resume template using LaTeX.}
@@ -190,22 +187,34 @@
     % ---------------------------------------------------------------------------------------------------------------- %
     \section{Projects}
 
-    \rProjectHeading{Creator}{Vala JetBrains}{github.com/vala-lang/vala-jetbrains}{May 2025 -- Present}
+    \rProjectHeading{Vala JetBrains}{Creator}{github.com/vala-lang/vala-jetbrains}{May 2025 -- Present}
 
     \rListBeginCircle
-        \rPlainItem{Creator of an open source IDE plugin made with Java for JetBrains IDEs allowing developers to write using the one of the most popular programming languages on Linux: the Vala programming language. Downloaded over 16k times.}
+        \rPlainItem{Built an open-source IDE plugin using Java for JetBrains IDEs, allowing developers to write using one of the most popular programming languages on Linux: the Vala programming language. Downloaded over 16k times.}
     \rListEndCircle
 
-    \rProjectHeading{Creator}{Portfolio}{github.com/tbusk/portfolio}{Jan 2026 -- Present}
+    \rProjectHeading{Portfolio}{}{github.com/tbusk/portfolio}{Jan 2026 -- Present}
 
     \rListBeginCircle
-    \rPlainItem{Created an open source multi-theme static portfolio website template using TypeScript, Preact, Tailwind CSS, GitHub Actions, and GitHub Pages to showcase my programming journey.}
+        \rPlainItem{Created an open-source multi-theme static portfolio website template configured via JSON using TypeScript, Preact, Tailwind CSS, GitHub Actions, and GitHub Pages, enabling developers to easily showcase their programming work.}
     \rListEndCircle
 
 %    \rProjectHeading{Solus Packages}{github.com/getsolus/packages}
 %
 %    \rListBeginCircle
 %        \rPlainItem{Packager, maintainer, and supporter of applications and tools on Solus, a popular rolling-release Linux distribution, such as VSCodium, Stripe CLI, IVPN, Vala Language Server, and Vala Lint. }
+%    \rListEndCircle
+
+%    \rProjectHeading{Military Warehouse Item Classification}{Member}{}{Jul 2025 -- Aug 2025}
+%
+%    \rListBeginCircle
+%        \rPlainItem{Built an image classification ML model using Python, Selenium, NumPy, Keras, and TensorFlow, achieving 96.3\% top-5 and 88.57\% top-1 accuracy over 2,500 categories and 228k images, surpassing 19 tested local models by 12\%.}
+%    \rListEndCircle
+
+%    \rProjectHeading{AWS DeepRacer}{Participant}{}{Jul 2025 -- Aug 2025}
+%
+%    \rListBeginCircle
+%        \rPlainItem{Trained a series of ML models on AWS DeepRacer, a 3D reinforcement learning-based racing simulator, ranking 2/747 in the United States, 8/974 in North America, and 58/4076 in the world in a time-based community competition.}
 %    \rListEndCircle
 
     % ---------------------------------------------------------------------------------------------------------------- %
@@ -218,5 +227,9 @@
     \rListBeginEmpty
         \rBoldedItemAndDescription{Awards}{\href{https://www.ferris.edu/news/archive/2026/2026-college-of-business-excellence-awards.htm}{2026 College of Business Excellence Award}, Dean's List}
     \rListEndEmpty
+
+%    \rListBeginEmpty
+%        \rBoldedItemAndDescription{Relevant Coursework}{Intro to Machine Learning, Applied Machine Learning Software}
+%    \rListEndEmpty
 
 \end{document}
