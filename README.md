@@ -24,7 +24,7 @@ To get started, you can add things to the document starting between the begin an
 
 To build the PDF, you will need to install `texlive` and build using `latexmk`.
 
-You likely will need to install dependencies, but on the Solus Linux Distrobution, you only need `texlive` and
+You likely will need to install dependencies, but on the Solus Linux Distribution, you only need `texlive` and
 `latexmk`.
 
 You can build a PDF without keeping the extra output files using the following command:
@@ -70,23 +70,39 @@ Your contact details and socials for the header and elsewhere:
 You can create new variables by adding them in the parameter section like this:
 
 ```latex
-\def\name{value}
+\def\myName{John Doe}
 ```
 
 and calling them like this:
 
 ```latex
-\name
+\myName
 ```
 
 ### Sections
 
-To declare a section, all you need to do is add a section with a title of it in a parameter.
+To declare a section, all you need to do is add a section with its title in a parameter.
 
-I use this for section headers, such as `Education`, `Experience`, `Projects`, `Skills`, and `Open Source`.
+I use this for section headers, such as `Education`, `Projects`, `Skills`, and `Work Experience`.
 
 ```latex
-\section{Section Name}
+\section{Education}
+```
+
+### Education Items
+
+This section has five parameters:
+
+1. Degree Type (e.g., Bachelor of Science, BSc, Associates, Masters)
+2. Degree Name (e.g., Computer Science)
+3. University Name (e.g., University of Pennsylvania)
+4. Date Range (e.g. May 2000 -- May 2004)
+5. GPA, standing, or whatever you want to highlight
+
+Example:
+
+```latex
+\rEducationItem{BSc}{Computer Science}{MIT}{May 2000 -- May 2004}{GPA: 3.50 / 4.00 (Cum Laude)}
 ```
 
 ### Lists
@@ -131,25 +147,24 @@ Two types of headings are supported: general and project.
 #### General
 
 This has four parameters, which is a tabular layout of a bolded title on the top left, an item on the top right, an
-italicized item on the bottom left, and an italicized item on the bottom right.
-
-I use this for education items and experience items, which param 1 shows either the university or company name, param 2
-shows the location, param 3 shows the degree name or job title, and param 4 shows the date range or completion date.
+item on the bottom left, and an italicized item on the bottom right.
 
 ```latex
-\rGeneralHeading{Company Name}{Location}{Job Title}{Start Date to End Date (or Present)}
+\rGeneralHeading{Software Developer}{May 2024 -- Present}{Reddit}{Orlando, FL}
 ```
 
 #### Project
 
-This has two parameters, which is a bolded title on the left and a link to the project on the right side.
+This has four parameters:
 
-You can use this for projects you've worked on, such as personal projects or contributions you made to open source ones.
+1. Project Name (Bolded)
+2. Role (Optional)
+3. Link (Optional)
+4. Date Range
 
-I use this for my open source work.
 
 ```latex
-\rProjectHeading{Project Name}{Link without https or www)}
+\rProjectHeading{React}{Maintainer}{github.com/react/react}{Jan 2016 -- Present}
 ```
 
 ### List Items
@@ -172,7 +187,7 @@ tech stack item.
 It has two parameters, one is a bolded title with a colon and a space appended to it, and the other is a description.
 
 ```latex
-\rBoldedItemAndDescription{Name}{Description}
+\rBoldedItemAndDescription{Awards}{Dean's List}
 ```
 
 ### Links
