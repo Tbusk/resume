@@ -1,10 +1,12 @@
 \newcommand{\rHeader}[0]{
-    \begin{center}
-        \textbf{\Huge \myName} \\
-        \vspace{2pt}\href{tel:\myPhoneNumberLink}{\small \myPhoneNumberVisible} $|$
-        \href{mailto:\myEmailAddress}{\small \uline{\myEmailAddress}} $|$
-        \href{https://\myGitHubUrl}{\small \uline{\myGitHubUrl}} $|$
-        \href{https://\myLinkedInUrl}{\small \uline{\myLinkedInUrl}} $|$
-        \href{https://\myWebsite}{\small \uline{\myWebsite}}
-    \end{center}\vspace{-6pt}
+
+        \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r} % separates cols with spacing}
+                \textbf{\Huge \myName} &
+                \raisebox{1.5ex}{%
+                        \href{mailto:\myEmailAddress}{\small \myEmailAddress} $|$
+                        \href{https://\myGitHubUrl}{\small \myGitHubUrl} $|$
+                        \href{https://\myWebsite}{\small \myWebsite}%
+                }
+        \end{tabular*}\vspace{4pt}
+
 }

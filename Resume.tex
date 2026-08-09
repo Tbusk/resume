@@ -9,6 +9,7 @@
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{ulem}
+\usepackage{fontspec}
 
 % -------------------------------------------------------------------------------------------------------------------- %
 % Imports commands from source files
@@ -46,20 +47,28 @@
 \addtolength{\textheight}{1in}
 
 % generate correct unicode codepoints
-\pdfgentounicode=1
+%\pdfgentounicode=1
+
+% set font
+\setmainfont{Liberation Sans}
+
+% update small to be 10.5
+\renewcommand{\small}{\fontsize{10.5}{11.5}\selectfont}
 
 % -------------------------------------------------------------------------------------------------------------------- %
 % controls section's look
 \titleformat{\section}{
-    \vspace{-11pt} % controls space above section
+    \vspace{-10pt} % controls space above section
     \scshape % gives text the title case with sizing dif between upper and lower case char
     \large % increases text size
+    \bfseries
 }{}{
     0em % margin left for text
 }{}[
     \color{black} % specifies line coloring
+    \vspace{3pt}
     \titlerule % adds hr line
-    \vspace{-5pt} % removes extra top margin
+    \vspace{-8pt} % removes extra top margin
 ]
 
 % -------------------------------------------------------------------------------------------------------------------- %
@@ -71,13 +80,8 @@
 
 % use professional, personal email you have access to, not school email
 \def\myEmailAddress{trevor@tbusk.com}
-% make easily parsable, include country and area codes like +XXXXXXXXXXX
-\def\myPhoneNumberLink{+12695125088}
-% add area code and format like +X (XXX) XXX-XXXX
-\def\myPhoneNumberVisible{+1 (269) 512-5088}
 % don't need to include https below - done so automatically
 \def\myWebsite{tbusk.com}
-\def\myLinkedInUrl{linkedin.com/in/trevor-busk}
 \def\myGitHubUrl{github.com/tbusk}
 
 % -------------------------------------------------------------------------------------------------------------------- %
@@ -87,7 +91,122 @@
     \rHeader
 
     % ---------------------------------------------------------------------------------------------------------------- %
-    \section{Skills}
+    \section{EDUCATION}
+
+    % degree type, major, school     duration
+    % GPA: X.XX / X.XX and Standing
+    \rEducationItem{Bachelor of Science}{Digital Media Software Engineering}{Ferris State University}{May 2026}{GPA: 4.00 / 4.00 (Summa Cum Laude)}
+
+    \rListBeginEmpty
+        \rBoldedItemAndDescription{Awards}{2026 College of Business Excellence Award}
+    \rListEndEmpty
+
+    % ---------------------------------------------------------------------------------------------------------------- %
+    \section{WORK EXPERIENCE}
+
+    \rGeneralHeading{Software Engineer}{June 2024 -- Present}{AD Solutions}{Part-time contract · Remote}
+
+    \rListBeginCircle
+
+        \rPlainItem{Maintained and expanded the billing portal as the sole developer on-call for 650+ clients covering Stripe, invoices, onboarding, and e-automate ERP in Java, Spring Boot, TypeScript, MariaDB, Google Cloud Platform, and React}
+        % Used: Java, Spring Boot, Maven, JUnit 5, Mockito, Google Cloud Platform, Microsoft SQL Server, e-automate, stored procedures, Stripe, webhooks, MyBatis, Hibernate, MariaDB
+        \rPlainItem{Saved 100 accountant hours yearly (5 minutes each at 100 payments per month) by automating reconciliation in an unsupported e-automate workflow, validated with accountants on test payments, posting, and reversals}
+        \rPlainItem{Automated Stripe payment recording into e-automate ERP by reverse-engineering its Microsoft SQL Server backend and writing stored procedures affecting 20+ tables, invoked from Java and Spring Boot}
+        %\rPlainItem{Reverse-engineered the legacy e-automate SQL Server backend to automate payment reconciliation, processing Stripe webhooks in Java and Spring Boot and recording payments via stored procedures across 20+ tables}
+
+        % Used: Java, Spring Boot, CRON, JUnit 5, Mockito, Google Cloud Platform (secrets, logging), Freemarker, Gradle
+        \rPlainItem{Reclaimed 288 hours for a sales manager (3 hours per week since August 2024) by automating weekly Pipedrive CRM lead board status reports for 5 sales teams in Java and Spring Boot}
+
+        % Used: Java, JUnit 5, Mockito
+        \rPlainItem{Increased test coverage to 77\% method and 88\% class for the billing portal backend by adding 1k+ JUnit tests}
+
+        % Used: Java, Freemarker, MariaDB, Microsoft SQL Server, Java Mail
+        %\rPlainItem{Delivered 3k+ billing portal emails (invoices, autopay, onboarding, one-time codes) via Java and FreeMarker integration.}
+
+        % Used: Java, Quarkus (Scheduler, Rest), Docker (Dockerfile, Docker Compose), GitHub Actions (Building and uploading docker image), Gradle, Google Cloud Platform (secrets, logging), JUnit 5, JazzHR, Predictive Index
+        % part 1: added candidates to workflows (IT, copier technician, installation technician, accounting, customer experience, market development rep, account exec, front desc rep) who applied to jobs every 30 minutes
+        % part 2: synced behavioral assessment reports from Predictive Index to JazzHr candidate via webhook and upload pdf to jazzhr
+        %\rPlainItem{Eliminated 40+ hours per year for recruiters by building a Java automation that routes JazzHR candidates into workflows for 50+ jobs and syncs Predictive Index behavioral assessments to JazzHR via webhooks}
+
+
+        % Used: 
+        % Backend: Java, Stripe, Spring Scheduler, data from e-automate via Microsoft SQL Server backend, data from MariaDB for account
+        % Frontend: React, TypeScript, Bootstrap for managing it via new wallet page and signups in payment page
+        %\rPlainItem{Automated collection of 1k+ payments by adding autopay to the billing portal in Java, Stripe, TypeScript, and React}
+
+        % Used: GitHub Actions, Docker
+        \rPlainItem{Reduced monthly deploy effort from 4 hours to 1 minute (1 hour of manual SSH pull-test-build-deploy, 4 times a month) by establishing CI/CD with GitHub Actions and Docker with testing, builds, approvals, and deployment}
+
+        % Used: Microsoft SQL Server, Stored Procedures, Webhooks, Java, Spring Boot, e-automate
+        %\rPlainItem{Replaced Zapier/CEO Juice meter pipeline for 12+ printers with a Java / Spring Boot flow that ingests Parseur webhooks, validates, and inserts meter reads into e-automate ERP via Microsoft SQL Server stored procedures}
+    \rListEndCircle
+
+    \rGeneralHeading{Research Assistant}{Jan 2026 -- May 2026}{Ferris State University}{Part-time · Remote}
+
+    \rListBeginCircle
+        % Used: Java, Spring Boot, Markdown, Spring AI, Amazon Web Services (Secret Manager, Bedrock, CloudWatch, ECR, ECS via Fargate), TypeScript (extension and in webview), React (in webview)
+        \rPlainItem{Built a Claude-powered VS Code extension in TypeScript that gave software development students in-IDE AI help for a campus pilot, with evaluation and expansion interest from schools in Canada and Kuwait}
+        \rPlainItem{Delivered 3 assistant modes (study, assignment, code review) via a Java, Spring Boot, PostgreSQL, and Amazon Bedrock backend on Amazon Web Services that streams Markdown over REST APIs}
+        \rPlainItem{Deployed the campus pilot on Amazon Web Services by running Docker images from ECR on ECS Fargate}
+        \rPlainItem{Rendered Markdown with syntax-highlighted code by building a VS Code Webview in TypeScript and React}
+    \rListEndCircle
+
+    \rGeneralHeading{Software Engineer}{Oct 2025 -- Apr 2026}{Telic Corporation}{Part-time contract · Remote}
+
+    \rListBeginCircle
+        \rPlainItem{Built an MVP international eCommerce platform for personalized books for children (English and Arabic) in TypeScript, React, PostgreSQL, Payload CMS, and Docker and handed it off to the engineering team}
+        %\rPlainItem{Proved illustrated-book personalization was viable by evaluating dozens of image generation, mixing, face-swapping, and feature-alteration models across GitHub, Hugging Face, OpenRouter, and Google}
+        %\rPlainItem{Generated multi-language book PDFs by implementing a Node.js pipeline with PDFKit and Puppeteer}
+    \rListEndCircle
+
+    \rGeneralHeading{Software Engineer Intern}{Sept 2023 -- May 2024}{Kendall College of Art and Design}{Part-time · Remote}
+
+    \rListBeginCircle
+        \rPlainItem{Unified AD Solutions client billing into a self-serve portal by building a Java, Spring Boot, TypeScript, and React application integrated with Stripe and e-automate ERP on Microsoft SQL Server}
+        \rPlainItem{Consolidated multi-invoice ERP billing for AD Solutions into one monthly PDF per customer, delivering 2.7k+ invoices by implementing a scheduled Java, Spring Boot, and Gradle generator with Thymeleaf and IronPDF}
+    \rListEndCircle
+
+    % ---------------------------------------------------------------------------------------------------------------- %
+    \section{PROJECTS}
+
+    \rProjectHeading{Vala JetBrains}{github.com/vala-lang/vala-jetbrains}
+
+    \rListBeginCircle
+        \rPlainItem{Reached 16k+ downloads and 14+ GitHub stars by publishing an open-source Java JetBrains IDE plugin for Vala}
+    \rListEndCircle
+
+%    \rProjectHeading{Problem Tracker}{github.com/tbusk/problem-tracker}
+%
+%    \rListBeginCircle
+%        \rPlainItem{Tracked solved competitive programming problems and activity reports across 4 Spring Boot services by building an open-soruce microservices monorepo with Spring Cloud Config, Gateway, Eureka, and Oracle Database}
+%    \rListEndCircle
+
+%    \rProjectHeading{Portfolio}{github.com/tbusk/portfolio}
+%
+%    \rListBeginCircle
+%        \rPlainItem{Created an open-source multi-theme static portfolio website template configured via JSON using TypeScript, React, Tailwind CSS, GitHub Actions, and GitHub Pages, enabling developers to easily showcase their programming work}
+%    \rListEndCircle
+%
+%    \rProjectHeading{Military Warehouse Item Classification}{}
+%
+%    \rListBeginCircle
+%        \rPlainItem{Achieved 96.3\% top-5 and 88.6\% top-1 accuracy across 2,500 warehouse item categories on 228k images by training a classification model using Python, Tensorflow, Keras, and PyTorch, surpassing 19 local models by 12\% top-1}
+%    \rListEndCircle
+
+%    \rProjectHeading{Solus Packages}{github.com/getsolus/packages}
+%
+%    \rListBeginCircle
+%        \rPlainItem{Packager, maintainer, and supporter of applications and tools on Solus, a popular rolling-release Linux distribution, such as VSCodium, Stripe CLI, IVPN, Liboqs, Vala Language Server, and Vala Lint}
+%    \rListEndCircle
+
+%    \rProjectHeading{AWS DeepRacer}{}
+%
+%    \rListBeginCircle
+%        \rPlainItem{Trained a series of ML models on AWS DeepRacer, a 3D reinforcement learning-based racing simulator, ranking 2/747 in the United States, 8/974 in North America, and 58/4076 in the world in a time-based community competition}
+%    \rListEndCircle
+
+    % ---------------------------------------------------------------------------------------------------------------- %
+    \section{SKILLS}
 
     % add additional space between section title and content
     \vspace{4pt}
@@ -97,127 +216,10 @@
 %        \rBoldedItemAndDescription{Cloud \& Infrastructure}{Amazon Web Services, Google Cloud Platform, Docker, Sematext}
 %        \rBoldedItemAndDescription{Databases}{Microsoft SQL Server, MariaDB, Oracle Database, PostgreSQL}
 %        \rBoldedItemAndDescription{Frameworks}{Spring Boot, Spring Cloud, React}
-        % only include relevant keywords to JD
-        \rBoldedItemAndDescription{Programming Languages \& Databases}{Java, TypeScript, Microsoft SQL Server, MariaDB, Oracle Database}
-        \rBoldedItemAndDescription{Cloud Providers \& Technologies}{Google Cloud Platform, Amazon Web Services, Spring Boot, React, Docker}
-    \rListEndEmpty
-
-    % ---------------------------------------------------------------------------------------------------------------- %
-    \section{Work Experience}
-
-    % be consistent with date formatting - suggested to use MMM YYYY or Present
-    \rGeneralHeading{Software Engineer}{Jun 2024 -- Present}{AD Solutions}{Hastings, MI}
-
-    \rListBeginCircle
-
-        % Used: Java, Spring Boot, CRON, JUnit 5, Mockito, Google Cloud Platform (secrets, logging), Freemarker, Gradle
-        \rPlainItem{Saved 150+ hours/yr by building a Java / Spring Boot Pipedrive integration that emails weekly reports to 5+ teams.}
-
-        % Used: Java, Spring Boot, Maven, JUnit 5, Mockito, Google Cloud Platform, Microsoft SQL Server, e-automate, stored procedures, Stripe, webhooks, MyBatis, Hibernate, MariaDB
-        \rPlainItem{Reduced accountant workload by 100+ hours/yr by automating payment reconciliation across the billing portal, Stripe, and e-automate ERP with Java, Spring Boot, webhooks, MariaDB, and Microsoft SQL Server.}
-
-        % Used: Java, JUnit 5, Mockito
-        \rPlainItem{Increased coverage to 77\% method / 88\% class for the billing portal backend by adding 1k+ JUnit and Mockito tests.}
-        % old: \rPlainItem{Added 1k+ tests for the company's billing portal, increasing code coverage to 77\% method and 88\% class coverage.}
-
-        % Used: Java, Freemarker, MariaDB, Microsoft SQL Server, Java Mail
-        \rPlainItem{Delivered 3k+ billing portal emails (invoices, autopay, onboarding, one-time codes) via Java / FreeMarker integration.}
-
-        % Used: Java, Quarkus (Scheduler, Rest), Docker (Dockerfile, Docker Compose), GitHub Actions (Building and uploading docker image), Gradle, Google Cloud Platform (secrets, logging), JUnit 5, JazzHR, Predictive Index
-        % part 1: added candidates to workflows (IT, copier technician, installation technician, accounting, customer experience, market development rep, account exec, front desc rep) who applied to jobs every 30 minutes
-        % part 2: synced behavioral assessment reports from Predictive Index to JazzHr candidate via webhook and upload pdf to jazzhr
-        \rPlainItem{Eliminated 40+ hours/yr of manual work for recruiters by building a Java / Quarkus automation that routes JazzHR candidates into workflows for 50+ jobs and syncs Predictive Index behavioral assessments to JazzHR via webhooks.}
-        % old: \rPlainItem{Crafted an HR automation syncing candidate data to workflows for 50+ jobs, saving recruiters 40+ hours/yr.}
-
-
-        % Used: 
-        % Backend: Java, Stripe, Spring Scheduler, data from e-automate via Microsoft SQL Server backend, data from MariaDB for account
-        % Frontend: React, TypeScript, Bootstrap for managing it via new wallet page and signups in payment page
-        \rPlainItem{Collected 1k+ payments by adding autopay to the billing portal in Java / Stripe and TypeScript / React.}
-
-        % Used: GitHub Actions, Docker
-        \rPlainItem{Cut developer deployment time from 4 hours/mo to 1 minute/mo by establishing CI/CD with GitHub Actions and Docker for a hybrid on-prem stack using Google Cloud Platform (logging, secrets, storage, sheets, monitoring).}
-
-        %\rPlainItem{Extended the billing portal with an onboarding management and tracking automation, onboarding 650+ businesses.}
-
-        % Used: Microsoft SQL Server, Stored Procedures, Webhooks, Java, Spring Boot, e-automate
-        \rPlainItem{Replaced Zapier/CEO Juice meter pipeline for 12+ printers with a Java / Spring Boot flow that ingests Parseur webhooks, validates, and inserts meter reads into e-automate ERP via Microsoft SQL Server stored procedures.}
-    \rListEndCircle
-
-    \rGeneralHeading{Research Assistant}{Jan 2026 -- May 2026}{Ferris State University}{Hastings, MI}
-
-    \rListBeginCircle
-        % Used: Java, Spring Boot, Markdown, Spring AI, Amazon Web Services (Secret Manager, Bedrock, CloudWatch, ECR, ECS via Fargate), TypeScript (extension and in webview), React (in webview)
-        \rPlainItem{Provided software development students AI assistance inside VS Code by building a Claude-powered IDE extension for a campus pilot, with adoption interest from schools in Canada and Kuwait.}
-        \rPlainItem{Delivered three assistant modes (study, assignment, code review) in VS Code by creating a Java, Spring Boot, and Spring AI backend on Amazon Web Services using Claude Sonnet that streams Markdown over RESTful APIs.}
-        \rPlainItem{Expanded model context beyond Amazon Bedrock's file-type and count limits by designing a Markdown prompt pipeline that embeds up to 60 code files across 400+ types plus 4 PDFs/images.}
-        %\rPlainItem{Deployed the university pilot on Amazon Web Services by running Docker images from ECR on ECS via Fargate.}
-        \rPlainItem{Rendered backend Markdown with syntax-highlighted code in the IDE by building a VS Code Webview in TypeScript and React with the VS Code API, Tailwind CSS, react-markdown, and Shiki.}
-    \rListEndCircle
-
-%    \rGeneralHeading{Software Engineer}{Oct 2025 -- Apr 2026}{Telic Corporation}{Hastings, MI}
-%
-%    \rListBeginCircle
-%        \rPlainItem{Collaborated with a CEO on an AI-powered personalized children's books website targeting the international market.}
-%        \rPlainItem{Created eCommerce platform and added CMS extension, enabling staff to create pdf-based books and manage website.}
-%        \rPlainItem{Technologies: TypeScript, JavaScript, React, Next.js, PayloadCMS, PostgreSQL, Tailwind CSS, Docker}
-%    \rListEndCircle
-
-    \rGeneralHeading{Software Engineer Intern}{Sep 2023 -- May 2024}{Kendall College of Art and Design}{Grand Rapids, MI}
-
-    \rListBeginCircle
-        \rPlainItem{Unified billing for 650+ business clients of AD Solutions via a Java / Spring Boot and TypeScript / React portal with Stripe and e-automate ERP Microsoft SQL Server (1k+ tables), covering login, equipment/usage, and payments.}
-        \rPlainItem{Consolidated multi-invoice ERP billing for AD Solutions into one monthly PDF per customer, delivering 2.7k+ invoices by implementing a scheduled Java / Spring Boot generator with Thymeleaf and IronPDF.}
-    \rListEndCircle
-
-    % ---------------------------------------------------------------------------------------------------------------- %
-    \section{Projects}
-
-    \rProjectHeading{Vala JetBrains}{Creator/Maintainer}{github.com/vala-lang/vala-jetbrains}{May 2025 -- Present}
-
-    \rListBeginCircle
-        \rPlainItem{Reached 16k+ downloads / 14+ GitHub stars by publishing an open-source Java JetBrains IDE plugin for Vala.}
-    \rListEndCircle
-
-    \rProjectHeading{Problem Tracker}{}{github.com/tbusk/problem-tracker}{Jul 2026 -- Present}
-
-    \rListBeginCircle
-        \rPlainItem{Enabled structured tracking of solved competitive programming problems and activity-based reports by building an open-source microservices app with Java, Spring Boot, Spring Cloud, and Oracle Database.}
-    \rListEndCircle
-
-%    \rProjectHeading{Portfolio}{}{github.com/tbusk/portfolio}{Jan 2026 -- Present}
-%
-%    \rListBeginCircle
-%        \rPlainItem{Created an open-source multi-theme static portfolio website template configured via JSON using TypeScript, React, Tailwind CSS, GitHub Actions, and GitHub Pages, enabling developers to easily showcase their programming work.}
-%    \rListEndCircle
-
-%    \rProjectHeading{Military Warehouse Item Classification}{Member}{}{Jul 2025 -- Aug 2025}
-%
-%    \rListBeginCircle
-%        \rPlainItem{Built an image classification ML model using Python, Selenium, NumPy, Keras, and TensorFlow, achieving 96.3\% top-5 and 88.57\% top-1 accuracy over 2,500 categories and 228k images, surpassing 19 tested local models by 12\%.}
-%    \rListEndCircle
-
-%    \rProjectHeading{Solus Packages}{}{github.com/getsolus/packages}{Feb 2026 -- Present}
-%
-%    \rListBeginCircle
-%        \rPlainItem{Packager, maintainer, and supporter of applications and tools on Solus, a popular rolling-release Linux distribution, such as VSCodium, Stripe CLI, IVPN, Liboqs, Vala Language Server, and Vala Lint. }
-%    \rListEndCircle
-
-%    \rProjectHeading{AWS DeepRacer}{Participant}{}{Jul 2025 -- Aug 2025}
-%
-%    \rListBeginCircle
-%        \rPlainItem{Trained a series of ML models on AWS DeepRacer, a 3D reinforcement learning-based racing simulator, ranking 2/747 in the United States, 8/974 in North America, and 58/4076 in the world in a time-based community competition.}
-%    \rListEndCircle
-
-    % ---------------------------------------------------------------------------------------------------------------- %
-    \section{Education}
-
-    % degree type, major, school     duration
-    % GPA: X.XX / X.XX and Standing
-    \rEducationItem{BS}{Digital Media Software Engineering}{Ferris State University}{May 2022 -- May 2026}{GPA: 4.00 / 4.00 (Summa Cum Laude)}
-
-    \rListBeginEmpty
-        \rBoldedItemAndDescription{Awards}{\href{https://www.ferris.edu/news/archive/2026/2026-college-of-business-excellence-awards.htm}{2026 College of Business Excellence Award}, Dean's List}
+    % only include relevant keywords to JD
+        \rBoldedItemAndDescription{Languages}{Java, TypeScript, SQL}
+        \rBoldedItemAndDescription{Backend}{Microsoft SQL Server, MariaDB, PostgreSQL, Spring Boot}
+        \rBoldedItemAndDescription{Technologies}{Google Cloud Platform, Amazon Web Services, Docker, GitHub Actions, React, Stripe}
     \rListEndEmpty
 
 \end{document}

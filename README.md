@@ -30,24 +30,21 @@ You likely will need to install dependencies, but on the Solus Linux Distributio
 You can build a PDF without keeping the extra output files using the following command:
 
 ```shell
-latexmk -pdf Resume.tex && latexmk -c
+latexmk -xelatex Resume.tex && latexmk -c
 ```
 
 This first half will build the pdf and the rest will clean up the extra files.
 
 ### Header
 
-The header is the topmost item in the résumé.
+The header is the topmost item in the resume.
 
 It contains:
 
 1. Your name
-2. Your phone number used as a link
-3. Your phone number formatted as you want it to look
-4. Your email address
-5. Your website
-6. Your GitHub page
-7. Your LinkedIn page
+2. Your email address
+3. Your GitHub page
+4. Your website
 
 ```latex
 \rHeader
@@ -55,22 +52,19 @@ It contains:
 
 ### Variables
 
-The document uses variables to simplify some of the experience
+The document uses variables to simplify some of the experience.
 
 Your contact details and socials for the header and elsewhere:
 
 - `\myName{}`: Your Full Name
-- `\myPhoneNumberLink{}`: Your phone number in a condensed format (e.g., +11234567890)
-- `\myPhoneNumberVisible{}`: Your phone number in a pretty format (e.g., +1 (123) 456-7890)
 - `\myEmailAddress{}`: Your email address
-- `\myWebsite{}`: Your website URL
-- `\myLinkedInUrl{}`: Your LinkedIn profile URL
 - `\myGitHubUrl{}`: Your GitHub profile URL
+- `\myWebsite{}`: Your website URL
 
 You can create new variables by adding them in the parameter section like this:
 
 ```latex
-\def\myName{John Doe}
+\def\myName{Trevor Busk}
 ```
 
 and calling them like this:
@@ -83,10 +77,10 @@ and calling them like this:
 
 To declare a section, all you need to do is add a section with its title in a parameter.
 
-I use this for section headers, such as `Education`, `Projects`, `Skills`, and `Work Experience`.
+I use this for section headers, such as `Skills`, `Work Experience`, `Projects`, and `Education`.
 
 ```latex
-\section{Education}
+\section{SKILLS}
 ```
 
 ### Education Items
@@ -94,15 +88,15 @@ I use this for section headers, such as `Education`, `Projects`, `Skills`, and `
 This section has five parameters:
 
 1. Degree Type (e.g., Bachelor of Science, BSc, Associates, Masters)
-2. Degree Name (e.g., Computer Science)
-3. University Name (e.g., University of Pennsylvania)
-4. Date Range (e.g. May 2000 -- May 2004)
+2. Degree Name (e.g., Digital Media Software Engineering)
+3. University Name (e.g., Ferris State University)
+4. Date (e.g. May 2026)
 5. GPA, standing, or whatever you want to highlight
 
 Example:
 
 ```latex
-\rEducationItem{BSc}{Computer Science}{MIT}{May 2000 -- May 2004}{GPA: 3.50 / 4.00 (Cum Laude)}
+\rEducationItem{Bachelor of Science}{Digital Media Software Engineering}{Ferris State University}{May 2026}{GPA: 4.00 / 4.00 (Summa Cum Laude)}
 ```
 
 ### Lists
@@ -150,21 +144,18 @@ This has four parameters, which is a tabular layout of a bolded title on the top
 item on the bottom left, and an italicized item on the bottom right.
 
 ```latex
-\rGeneralHeading{Software Developer}{May 2024 -- Present}{Reddit}{Orlando, FL}
+\rGeneralHeading{Software Engineer}{June 2024 -- Present}{AD Solutions}{Part Time Contract -- Remote}
 ```
 
 #### Project
 
-This has four parameters:
+This has two parameters:
 
 1. Project Name (Bolded)
-2. Role (Optional)
-3. Link (Optional)
-4. Date Range
-
+2. Link (Optional; right-aligned). Pass empty `{}` to omit.
 
 ```latex
-\rProjectHeading{React}{Maintainer}{github.com/react/react}{Jan 2016 -- Present}
+\rProjectHeading{Problem Tracker}{github.com/tbusk/problem-tracker}
 ```
 
 ### List Items
@@ -187,7 +178,7 @@ tech stack item.
 It has two parameters, one is a bolded title with a colon and a space appended to it, and the other is a description.
 
 ```latex
-\rBoldedItemAndDescription{Awards}{Dean's List}
+\rBoldedItemAndDescription{Languages}{Java, TypeScript, SQL}
 ```
 
 ### Links
@@ -239,7 +230,7 @@ You can make something italicized by using
 
 ## Inspiration
 
-This was inspired by [sb2nov's LaTeX Resume](https://github.com/sb2nov/resume/).
+This was inspired by [sb2nov's LaTeX Resume](https://github.com/sb2nov/resume/) but has diverged significantly.
 
 ## License
 
