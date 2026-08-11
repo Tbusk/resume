@@ -91,17 +91,6 @@
     \rHeader
 
     % ---------------------------------------------------------------------------------------------------------------- %
-    \section{EDUCATION}
-
-    % degree type, major, school     duration
-    % GPA: X.XX / X.XX and Standing
-    \rEducationItem{Bachelor of Science}{Digital Media Software Engineering}{Ferris State University}{May 2026}{GPA: 4.00 / 4.00 (Summa Cum Laude)}
-
-    \rListBeginEmpty
-        \rBoldedItemAndDescription{Awards}{2026 College of Business Excellence Award}
-    \rListEndEmpty
-
-    % ---------------------------------------------------------------------------------------------------------------- %
     \section{WORK EXPERIENCE}
 
     \rGeneralHeading{Software Engineer}{June 2024 -- Present}{AD Solutions}{Part-time contract · Remote}
@@ -112,8 +101,6 @@
         % Used: Java, Spring Boot, Maven, JUnit 5, Mockito, Google Cloud Platform, Microsoft SQL Server, e-automate, stored procedures, Stripe, webhooks, MyBatis, Hibernate, MariaDB
         \rPlainItem{Saved 100 accountant hours yearly (5 minutes each at 100 payments per month) by automating reconciliation in an unsupported e-automate workflow, validated with accountants on test payments, posting, and reversals}
         \rPlainItem{Automated Stripe payment recording into e-automate ERP by reverse-engineering its Microsoft SQL Server backend and writing stored procedures affecting 20+ tables, invoked from Java and Spring Boot}
-        %\rPlainItem{Reverse-engineered the legacy e-automate SQL Server backend to automate payment reconciliation, processing Stripe webhooks in Java and Spring Boot and recording payments via stored procedures across 20+ tables}
-
         % Used: Java, Spring Boot, CRON, JUnit 5, Mockito, Google Cloud Platform (secrets, logging), Freemarker, Gradle
         \rPlainItem{Reclaimed 288 hours for a sales manager (3 hours per week since August 2024) by automating weekly Pipedrive CRM lead board status reports for 5 sales teams in Java and Spring Boot}
 
@@ -167,6 +154,34 @@
     \rListEndCircle
 
     % ---------------------------------------------------------------------------------------------------------------- %
+    \section{SKILLS}
+
+    % add additional space between section title and content
+    \vspace{4pt}
+
+    \rListBeginEmpty
+%        \rBoldedItemAndDescription{Programming Languages}{Java, TypeScript}
+%        \rBoldedItemAndDescription{Cloud \& Infrastructure}{Amazon Web Services, Google Cloud Platform, Docker, Sematext}
+%        \rBoldedItemAndDescription{Databases}{Microsoft SQL Server, MariaDB, Oracle Database, PostgreSQL}
+%        \rBoldedItemAndDescription{Frameworks}{Spring Boot, Spring Cloud, React}
+    % only include relevant keywords to JD
+    \rBoldedItemAndDescription{Languages}{Java, TypeScript, SQL}
+    \rBoldedItemAndDescription{Backend}{Spring Boot, MariaDB, PostgreSQL, Microsoft SQL Server, JUnit, Mockito}
+    \rBoldedItemAndDescription{Frontend and Tools}{React, Docker, Git, Stripe, Amazon Web Services, Google Cloud Platform}
+    \rListEndEmpty
+
+    % ---------------------------------------------------------------------------------------------------------------- %
+    \section{EDUCATION}
+
+    % degree type, major, school     duration
+    % GPA: X.XX / X.XX and Standing
+    \rEducationItem{Bachelor of Science}{Digital Media Software Engineering}{Ferris State University}{May 2026}{GPA: 4.00 / 4.00 (Summa Cum Laude)}
+
+    \rListBeginEmpty
+    \rBoldedItemAndDescription{Awards}{2026 College of Business Excellence Award}
+    \rListEndEmpty
+
+    % ---------------------------------------------------------------------------------------------------------------- %
     \section{PROJECTS}
 
     \rProjectHeading{Vala JetBrains}{github.com/vala-lang/vala-jetbrains}
@@ -174,11 +189,11 @@
     \rListBeginCircle
         \rPlainItem{Reached 16k+ downloads and 14+ GitHub stars by publishing an open-source Java JetBrains IDE plugin for Vala}
     \rListEndCircle
-
+%
 %    \rProjectHeading{Problem Tracker}{github.com/tbusk/problem-tracker}
 %
 %    \rListBeginCircle
-%        \rPlainItem{Tracked solved competitive programming problems and activity reports across 4 Spring Boot services by building an open-soruce microservices monorepo with Spring Cloud Config, Gateway, Eureka, and Oracle Database}
+%        \rPlainItem{Tracked solved competitive programming problems and activity reports across 4 Spring Boot services by building an open-source microservices monorepo with Spring Cloud Config, Gateway, Eureka, and Oracle Database}
 %    \rListEndCircle
 
 %    \rProjectHeading{Portfolio}{github.com/tbusk/portfolio}
@@ -205,21 +220,5 @@
 %        \rPlainItem{Trained a series of ML models on AWS DeepRacer, a 3D reinforcement learning-based racing simulator, ranking 2/747 in the United States, 8/974 in North America, and 58/4076 in the world in a time-based community competition}
 %    \rListEndCircle
 
-    % ---------------------------------------------------------------------------------------------------------------- %
-    \section{SKILLS}
-
-    % add additional space between section title and content
-    \vspace{4pt}
-
-    \rListBeginEmpty
-%        \rBoldedItemAndDescription{Programming Languages}{Java, TypeScript}
-%        \rBoldedItemAndDescription{Cloud \& Infrastructure}{Amazon Web Services, Google Cloud Platform, Docker, Sematext}
-%        \rBoldedItemAndDescription{Databases}{Microsoft SQL Server, MariaDB, Oracle Database, PostgreSQL}
-%        \rBoldedItemAndDescription{Frameworks}{Spring Boot, Spring Cloud, React}
-    % only include relevant keywords to JD
-        \rBoldedItemAndDescription{Languages}{Java, TypeScript, SQL}
-        \rBoldedItemAndDescription{Backend}{Microsoft SQL Server, MariaDB, PostgreSQL, Spring Boot}
-        \rBoldedItemAndDescription{Technologies}{Google Cloud Platform, Amazon Web Services, Docker, GitHub Actions, React, Stripe}
-    \rListEndEmpty
 
 \end{document}

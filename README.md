@@ -35,6 +35,12 @@ latexmk -xelatex Resume.tex && latexmk -c
 
 This first half will build the pdf and the rest will clean up the extra files.
 
+You can also output an image easily using the following command:
+
+```shell
+pdftoppm -png -singlefile Resume.pdf ./media/ResumeScreenshot
+```
+
 ### Header
 
 The header is the topmost item in the resume.
