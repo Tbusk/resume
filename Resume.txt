@@ -1,0 +1,48 @@
+                                                                     trevor@tbusk.com | github.com/tbusk | tbusk.com
+Trevor Busk
+WORK EXPERIENCE
+Software Engineer                                                                                 June 2024 – Present
+AD Solutions                                                                               Part-time contract · Remote
+◦ Maintained and expanded the billing portal as the sole developer on-call for 650+ clients covering Stripe, invoices,
+  onboarding, and e-automate ERP in Java, Spring Boot, TypeScript, MariaDB, Google Cloud Platform, and React
+◦ Saved 100 accountant hours yearly (5 minutes each at 100 payments per month) by automating reconciliation in
+  an unsupported e-automate workflow, validated with accountants on test payments, posting, and reversals
+◦ Automated Stripe payment recording into e-automate ERP by reverse-engineering its legacy Microsoft SQL Server
+  backend and writing stored procedures affecting 20+ tables, invoked from Java and Spring Boot
+◦ Reclaimed 288 hours for a sales manager (3 hours per week since August 2024) by automating weekly Pipedrive
+  CRM lead board status reports for 5 sales teams in Java and Spring Boot
+◦ Increased test coverage to 77% method and 88% class for the billing portal backend by adding 1k+ JUnit tests
+◦ Reduced monthly deploy effort from 4 hours to 1 minute (1 hour of manual SSH pull-test-build-deploy, 4 times a
+  month) by establishing CI/CD with GitHub Actions and Docker with testing, builds, approvals, and deployment
+
+Research Assistant                                                                               Jan 2026 – May 2026
+Ferris State University                                                                            Part-time · Remote
+◦ Built a Claude-powered VS Code extension in TypeScript that gave software development students in-IDE AI help
+  for a campus pilot, with evaluation and expansion interest from schools in Canada and Kuwait
+◦ Delivered 3 assistant modes (study, assignment, code review) via a Java, Spring Boot, PostgreSQL, and Amazon
+  Bedrock backend on Amazon Web Services that streams Markdown over REST APIs
+◦ Deployed the campus pilot on Amazon Web Services by running Docker images from ECR on ECS Fargate
+◦ Rendered Markdown with syntax-highlighted code by building a VS Code Webview in TypeScript and React
+Software Engineer                                                                                 Oct 2025 – Apr 2026
+Telic Corporation                                                                          Part-time contract · Remote
+◦ Built an MVP international eCommerce platform for personalized books for children (English and Arabic) in
+  TypeScript, React, PostgreSQL, Payload CMS, and Docker and handed it off to the engineering team
+
+Software Engineer Intern                                                                        Sept 2023 – May 2024
+Kendall College of Art and Design                                                                  Part-time · Remote
+◦ Unified AD Solutions client billing into a self-serve portal by building a Java, Spring Boot, TypeScript, and React
+  application integrated with Stripe and e-automate ERP on Microsoft SQL Server
+◦ Consolidated multi-invoice ERP billing for AD Solutions into one monthly PDF per customer, delivering 2.7k+
+  invoices by implementing a scheduled Java, Spring Boot, and Gradle generator with Thymeleaf and IronPDF
+SKILLS
+Languages: Java, TypeScript, SQL
+Backend: Spring Boot, MariaDB, PostgreSQL, Microsoft SQL Server, JUnit, Mockito
+Frontend and Tools: React, Docker, Git, Stripe, Amazon Web Services, Google Cloud Platform
+EDUCATION
+Bachelor of Science, Digital Media Software Engineering, Ferris State University                              May 2026
+GPA: 4.00 / 4.00 (Summa Cum Laude)
+Awards: 2026 College of Business Excellence Award
+PROJECTS
+Vala JetBrains                                                                      github.com/vala-lang/vala-jetbrains
+◦ Reached 17k+ downloads and 14+ GitHub stars by publishing an open-source Java JetBrains IDE plugin for Vala
+
