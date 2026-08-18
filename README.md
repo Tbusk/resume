@@ -41,6 +41,12 @@ You can also output an image easily using the following command:
 pdftoppm -png -singlefile Resume.pdf ./media/ResumeScreenshot
 ```
 
+Additionally, you can view the rendering in text format using
+
+```shell
+pdftotext -layout Resume.pdf > Resume.txt
+```
+
 ### Header
 
 The header is the topmost item in the resume.
@@ -70,7 +76,7 @@ Your contact details and socials for the header and elsewhere:
 You can create new variables by adding them in the parameter section like this:
 
 ```latex
-\def\myName{Trevor Busk}
+\def\myName{John Doe}
 ```
 
 and calling them like this:
