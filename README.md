@@ -30,7 +30,7 @@ You likely will need to install dependencies, but on the Solus Linux Distributio
 You can build a PDF without keeping the extra output files using the following command:
 
 ```shell
-latexmk -xelatex Resume.tex && latexmk -c
+latexmk --quiet -xelatex Resume.tex && latexmk -c --quiet
 ```
 
 This first half will build the pdf and the rest will clean up the extra files.
