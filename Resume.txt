@@ -5,10 +5,10 @@ Software Engineer                                                               
 AD Solutions                                                                               Part-time contract · Remote
 ◦ Maintained and expanded the billing portal as the sole developer on-call for 650+ clients covering Stripe, invoices,
   onboarding, and e-automate ERP in Java, Spring Boot, TypeScript, MariaDB, Google Cloud Platform, and React
-◦ Saved 100 accountant hours yearly (5 minutes each at 100 payments per month) by automating reconciliation in
-  an unsupported e-automate workflow, validated with accountants on test payments, posting, and reversals
+◦ Improved Stripe to ERP reconciliation time 4,500x to 7,500x (3-5 minutes to 40ms) for 100 payments per month by
+  automating posting in a custom e-automate ERP workflow, validated with accountants
 ◦ Automated Stripe payment recording into e-automate ERP by reverse-engineering its legacy Microsoft SQL Server
-  backend and writing stored procedures affecting 20+ tables, invoked from Java and Spring Boot
+  backend and writing stored procedures affecting 20+ tables, integrated in the Java and Spring Boot billing portal
 ◦ Reclaimed 288 hours for a sales manager (3 hours per week since August 2024) by automating weekly Pipedrive
   CRM lead board status reports for 5 sales teams in Java and Spring Boot
 ◦ Increased test coverage to 77% method and 88% class for the billing portal backend by adding 1k+ JUnit tests
