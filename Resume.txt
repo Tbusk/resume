@@ -17,8 +17,8 @@ AD Solutions                                                                    
 
 Research Assistant                                                                               Jan 2026 – May 2026
 Ferris State University                                                                            Part-time · Remote
-◦ Built a Claude-powered VS Code extension in TypeScript that gave software development students in-IDE AI help
-  for a campus pilot, with evaluation and expansion interest from schools in Canada and Kuwait
+◦ Built a Claude-powered VS Code extension in TypeScript and Node.js that gave software development students
+  in-IDE AI help for a campus pilot, with evaluation and expansion interest from schools in Canada and Kuwait
 ◦ Delivered 3 assistant modes (study, assignment, code review) via a Java, Spring Boot, PostgreSQL, and Amazon
   Bedrock backend on Amazon Web Services that streams Markdown over REST APIs
 ◦ Deployed the campus pilot on Amazon Web Services by running Docker images from ECR on ECS Fargate
@@ -26,7 +26,7 @@ Ferris State University                                                         
 Software Engineer                                                                                 Oct 2025 – Apr 2026
 Telic Corporation                                                                          Part-time contract · Remote
 ◦ Built an MVP international eCommerce platform for personalized books for children (English and Arabic) in
-  TypeScript, React, PostgreSQL, Payload CMS, and Docker and handed it off to the engineering team
+  TypeScript, React, Next.js, Node.js, PostgreSQL, Payload CMS, and Docker and handed it off to the client’s team
 
 Software Engineer Intern                                                                        Sept 2023 – May 2024
 Kendall College of Art and Design                                                                  Part-time · Remote
@@ -36,8 +36,8 @@ Kendall College of Art and Design                                               
   invoices by implementing a scheduled Java, Spring Boot, and Gradle generator with Thymeleaf and IronPDF
 SKILLS
 Languages: Java, TypeScript, SQL
-Backend: Spring Boot, MariaDB, PostgreSQL, Microsoft SQL Server, JUnit, Mockito
-Frontend and Tools: React, Docker, Git, Stripe, Amazon Web Services, Google Cloud Platform
+Backend: Spring Boot, Node.js, MariaDB, PostgreSQL, Microsoft SQL Server, JUnit, Mockito
+Frontend and Tools: React, Next.js, Docker, Git, Stripe, Amazon Web Services, Google Cloud Platform
 EDUCATION
 Bachelor of Science, Digital Media Software Engineering, Ferris State University                              May 2026
 GPA: 4.00 / 4.00 (Summa Cum Laude)
