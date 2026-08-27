@@ -12,8 +12,8 @@ AD Solutions                                                                    
 ◦ Reclaimed 288 hours for a sales manager (3 hours per week since August 2024) by automating weekly Pipedrive
   CRM lead board status reports for 5 sales teams in Java and Spring Boot
 ◦ Increased test coverage to 77% method and 88% class for the billing portal backend by adding 1k+ JUnit tests
-◦ Reduced monthly deploy effort from 4 hours to 1 minute (1 hour of manual SSH pull-test-build-deploy, 4 times a
-  month) by establishing CI/CD with GitHub Actions and Docker with testing, builds, approvals, and deployment
+◦ Improved deployment time by 6x (1 hour to 10 minutes) by establishing CI/CD with GitHub Actions and Docker
+  covering testing, builds, approvals, and deployment to an on-premises Linux VM
 
 Research Assistant                                                                               Jan 2026 – May 2026
 Ferris State University                                                                            Part-time · Remote
